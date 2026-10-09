@@ -1,0 +1,11 @@
+name: aggregator
+services:
+  aggregator_frontend:
+    build:
+      context: ../
+      dockerfile: docker/Dockerfile
+    depends_on:
+      aggregator_backend:
+        condition: service_healthy
+    networks:
+      - aggregator_network

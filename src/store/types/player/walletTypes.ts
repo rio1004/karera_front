@@ -1,0 +1,32 @@
+export interface WalletTypes {
+  showDrawer: boolean;
+  setShowDrawer: (value: boolean) => void;
+  showGenerateQR: boolean;
+  setShowGenerateQR: (value: boolean) => void;
+  showSupportedBank: boolean;
+  setShowSupportedBank: (value: boolean) => void;
+  depositAmount: number;
+  setDepositAmount: (value: number) => void;
+  walletTab: "deposit" | "withdraw";
+  setWalletTab: (value: "deposit" | "withdraw" | "send-credits") => void;
+  walletBalance: number;
+  setWalletBalance: (value: number) => void;
+  showConfirmWithdraw: boolean;
+  setShowConfirmWithdraw: (value: boolean) => void;
+  isWithdrawalSuccess: boolean;
+  setIswithdrawalSuccess: (value: boolean) => void;
+  showWalletPin: boolean;
+  setShowWalletPin: (value: boolean) => void;
+  isWithdrawSubmitted: boolean;
+  setIsWithdrawSubmitted: (value: boolean) => void;
+  showSuccessPin: boolean;
+  setShowSuccessPin: (value: boolean) => void;
+  showSuccessUpdatePin: boolean;
+  setShowSuccessUpdatePin: (value: boolean) => void;
+  hasActivePin: boolean;
+  setHasActivePin: (value: boolean) => void;
+  isPinVerified: boolean;
+  setIsPinVerified: (value: boolean) => void;
+  pins: string[];
+  setPins: (value: string[]) => void;
+}
