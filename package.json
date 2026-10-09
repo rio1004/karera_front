@@ -4,8 +4,9 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "dev": "vite",
+    "start": "vite",
     "build": "vite build",
-    "docker:local": "npm i && vite --host --port 3000",
     "lint": "eslint .",
     "preview": "vite preview"
   },

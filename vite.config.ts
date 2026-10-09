@@ -9,18 +9,14 @@ export default defineConfig(({ mode }) => {
   const API_HOST = env.VITE_API_HOST || "localhost";
   const API_PORT = env.VITE_API_PORT || "8000";
   const API_URL = `http://${API_HOST}:${API_PORT}`;
-  const API_ARCHIVE_URL = env.VITE_API_ARCHIVE_URL || "localhost";
+  const API_ARCHIVE_URL = env.VITE_API_ARCHIVE_URL || "http://127.0.0.1:8001";
 
   return {
     plugins: [react(), tailwindcss()],
     server: {
       allowedHosts: ["dev1.karera.live", "staging.karera.live"],
-      host: true,
+      host: "localhost",
       port: 3000,
-      watch: {
-        usePolling: true,
-        interval: 100,
-      },
       headers: {
         "Access-Control-Allow-Origin": "*",
       },
